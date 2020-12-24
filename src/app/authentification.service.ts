@@ -1,4 +1,4 @@
-  import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -13,5 +13,10 @@ export class AuthentificationService {
   // tslint:disable-next-line:typedef
   loginUser(user: any){
     return this.http.post<any>(this._loginrUrl, user);
+  }
+  // tslint:disable-next-line:typedef
+  getToken(){
+    // @ts-ignore
+    return localStorage.getItem('token');
   }
 }

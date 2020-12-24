@@ -1,1 +1,93 @@
-<p>add works!</p>
+<form [formGroup]="addForm" (ngSubmit)="addUser()">
+  <label>Form</label>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Prénom</mat-label>
+      <input type="text" matInput placeholder="Prénom" formControlName="firstname" required>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input type="text" matInput placeholder="Nom" formControlName="lastname" required>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>E-mail</mat-label>
+      <input type="email" matInput placeholder="Nom" formControlName="email" required>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Mot de passe</mat-label>
+      <input type="password" matInput placeholder="Mot de passe" formControlName="password" required>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <h4>Profil</h4>
+        <select matNativeControl formControlName="profils" required>
+          <option value="Admin">Admin</option>
+          <option value="Apprenant">Apprenant</option>
+          <option value="CM">CM</option>
+          <option value="Formateur">Formateur</option>
+        </select>
+      </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Numéro</mat-label>
+      <input type="tel" matInput placeholder="Tel" formControlName="tel" required>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Adresse</mat-label>
+      <input type="text" matInput placeholder="Adresse" formControlName="adresse" required>
+    </mat-form-field>
+  </p>
+  <div class="example-button-row">
+  <p>
+    <button type="submit" mat-stroked-button color="primary">Valide</button>
+  </p>
+  </div>
+</form>
+<!--<form class="normal-form">-->
+<!--  <mat-grid-list cols="2" rowHeight="300px">-->
+<!--    <mat-grid-tile>-->
+<!--      <div class="controles-container">-->
+<!--        <input type="hidden" formControlName="$key">-->
+<!--        <mat-form-field>-->
+<!--            <input  matInput placeholder="First Name*">-->
+<!--          <mat-error>Prénom Obligatoire</mat-error>-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input matInput placeholder="Last Name*">-->
+<!--          <mat-error>Nom Obligatoire</mat-error>-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input  matInput placeholder="E-mail*">-->
+<!--          <mat-error>Email Obligatoire</mat-error>-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input matInput placeholder="Tel*">-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input matInput placeholder="Adresse">-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input matInput placeholder="Profil*">-->
+<!--          <mat-error>Profil Obligatoire</mat-error>-->
+<!--        </mat-form-field>-->
+<!--      </div>-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile class="button-row">-->
+<!--        <button mat-raised-button color="primary" (click)="addUser()" type="submit">Valid</button>-->
+<!--    </mat-grid-tile>-->
+<!--  </mat-grid-list>-->
+<!--</form>-->
+
